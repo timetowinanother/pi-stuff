@@ -1,4 +1,3 @@
-pi3@rp3:~ $ cat cpustats.py
 ## This code grew out of a raspberrypi.org "temperature log" project. For now, I have commented out the
 ## graphing functionality and expanded the data being logged to include cpu volts and frequencies.
 ## This was written for a rasberry pi 3B+ running Raspbian 11 Bullseye.
