@@ -18,7 +18,7 @@ from time import sleep, strftime, time
 cpu = CPUTemperature()
 
 
-#0:time, 1:temp, 2:volts, 3-6:core frequencies, 7:fahreneheit, 8: used memory MBs
+## 0:time, 1:temp, 2:volts, 3-6:core frequencies, 7:fahreneheit, 8: used memory MBs
 def write_temp(temp,volts,cpu0freq,cpu1freq,cpu2freq,cpu3freq,ftemp,memused):
     with open("./cpustats.csv", "a") as log:
         log.write("{0},{1},{2},{3},{4},{5},{6},{7},{8}\n".format(strftime("%Y-%m-%d %H:%M:%S"), str(temp), str(volts[1][5:]), str(cpu0freq), str(cpu1freq), str(cpu2freq), str(cpu3freq),str(ftemp),str(memused)))
