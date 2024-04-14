@@ -22,7 +22,17 @@ cpu = CPUTemperature()
 def write_temp(temp,volts,cpu0freq,cpu1freq,cpu2freq,cpu3freq,ftemp,gov,memused):
     with open("./cpustats.csv", "a") as log:
         log.write("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}\n".format(strftime("%Y-%m-%d %H:%M:%S"), str(temp), str(volts[1][5:]), str(cpu0freq), str(cpu1freq), str(cpu2freq), str(cpu3freq),str(ftemp),str(gov),str(memused)))
-
+        print("Day+Time:    " + str(time)) 
+        print("Temp(C):     " + str(temp))
+        print("Temp(F):     " + str(ftemp))
+        print("Volts:       " + str(volts))
+        print("cpu0freq:    " + str(cpu0freq))
+        print("cpu1freq:    " + str(cpu1freq))
+        print("cpu2freq:    " + str(cpu2freq))
+        print("cpu3freq:    " + str(cpu3freq))
+        print("Scaling Gov: " + str(gov))
+        print("Used Memory: " + str(memused))
+        
 
 ## Enable for graphing functionality.
 #def graph(temp):
